@@ -19,7 +19,7 @@ angular.module('color-guess')
 				}
 			},
 			getString: function(name) {
-				var result = name;
+				var result = 'miss:' + name;
 				if (current_language[name]) {
 					result = current_language[name];
 				}

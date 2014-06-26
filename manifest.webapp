@@ -1,0 +1,40 @@
+{
+	"name": "Color Guess",
+	"description": "An app to test the Stroop effect guessing the right color",
+	"launch_path": "index.html",
+	"icons": {
+		"256x256": "",
+		"128x128": "",
+		"120x120": "",
+		"90x90": "",
+		"64x64": "",
+		"60x60": "",
+		"48x48": "",
+		"32x32": ""
+	},
+	"chrome": {"navigation": false},
+	"fullscreen": "true",
+	"orientation": "portrait-primary",
+	"installs_allowed_from": [
+		"https://marketplace.firefox.com"
+	],
+	"locales": {
+		"es": {
+			"description": "Una aplicación para probar el efecto Stroop acertando el color correcto"
+		},
+		"fr": {
+			"description": "An app to test the Stroop effect guessing the right color"
+		},
+		"pt": {
+			description": "An app to test the Stroop effect guessing the right color"
+		},
+		"de": {
+			description": "An app to test the Stroop effect guessing the right color"
+		}
+	},
+	"developer": {
+		"name": "Damian Serrano Thode",
+		"url": "http://dsthode.info"
+	},
+	"default_locale": "en"
+}

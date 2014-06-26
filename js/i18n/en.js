@@ -11,6 +11,9 @@ angular.module('color-guess')
 		orange: 'orange',
 		purple: 'purple',
 		gray: 'gray',
-		black: 'black'
+		black: 'black',
+		new_game: 'New game',
+		highscores: 'Highscores',
+		play: 'Play'
 	};
 }]);
