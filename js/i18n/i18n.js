@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('color-guess')
 .service('i18n', ['strings_en', 'strings_es', 'strings_fr', 'strings_pt', 'strings_de',
 	function(en, es, fr, pt, de) {

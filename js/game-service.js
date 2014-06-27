@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('color-guess')
 .service('GameService', ['MAX_INITIAL_COLORS', 'Colors', function(Colors) {
 	var max_colors = MAX_INITIAL_COLORS;
@@ -13,7 +15,8 @@ angular.module('color-guess')
 			return {
 				color: Colors[color_idx].color,
 				name: Colors[name_idx].name,
-				answer: color_idx == name_idx
+				answer: color_idx == name_idx,
+				time: 5000
 			};
 		},
 		newGame: function() {

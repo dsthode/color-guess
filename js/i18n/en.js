@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('color-guess')
 .service('strings_en', [function() {
 	return {
@@ -14,6 +16,8 @@ angular.module('color-guess')
 		black: 'black',
 		new_game: 'New game',
 		highscores: 'Highscores',
-		play: 'Play'
+		play: 'Play',
+		back: 'Back'
 	};
 }]);
+

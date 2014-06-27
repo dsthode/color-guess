@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('color-guess')
 .service('strings_es', [function() {
 	return {
@@ -11,7 +13,11 @@ angular.module('color-guess')
 		orange: 'naranja',
 		purple: 'morado',
 		gray: 'gris',
-		black: 'negro'
+		black: 'negro',
+		new_game: 'Nueva partida',
+		highscores: 'Puntuaciones',
+		play: 'Jugar',
+		back: 'Volver'
 	};
 }]);
 

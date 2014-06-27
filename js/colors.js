@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('color-guess')
 .service('Colors', [function() {
 	var colors = [

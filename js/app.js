@@ -1,4 +1,13 @@
-angular.module('color-guess', [])
+'use strict';
+
+window.requestAnimationFrame = window.requestAnimationFrame || 
+															window.mozRequestAnimationFrame ||
+															window.webkitRequestAnimationFrame || 
+															window.msRequestAnimationFrame;
+window.cancelAnimationFrame = window.cancelAnimationFrame || 
+													window.mozCancelAnimationFrame;
+
+angular.module('color-guess', ['ngRoute'])
 .constant('MAX_INITIAL_COLORS', 4)
 .config(['$routeProvider', function($routeProvider) {
 	$routeProvider

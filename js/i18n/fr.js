@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('color-guess')
 .service('strings_fr', [function() {
 	return {
