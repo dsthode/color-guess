@@ -2,9 +2,9 @@
 
 angular.module('color-guess')
 .service('Colors', [function() {
-	var colors = [
+	return [
 		{
-			color: '#ffff00',
+			color: '#ddff00',
 			name: 'yellow',
 		},
 		{
@@ -16,11 +16,11 @@ angular.module('color-guess')
 			name: 'red',
 		},
 		{
-			color: '#00ff00',
+			color: '#00cc00',
 			name: 'green',
 		},
 		{
-			color: '#00ffff',
+			color: '#66ccff',
 			name: 'light_blue',
 		},
 		{
