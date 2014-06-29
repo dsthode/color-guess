@@ -22,7 +22,7 @@ angular.module('color-guess')
 				previous_color_idx = color_idx;
 				previous_name_idx = name_idx;
 				score += 1;
-				time = MAX_TIME - (score/5 * TIME_SUBSTRACT);
+				time = MAX_TIME - (score/3 * TIME_SUBSTRACT);
 				if (time < 1000) {
 					time = 1000;
 				}

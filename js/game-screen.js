@@ -74,10 +74,10 @@ angular.module('color-guess')
 		}
 		rads = (timeElapsed * 2 * Math.PI / $scope.currentColor.time) + arcStart;
 		ctx.clearRect(0, 0, dimension, dimension);
-		ctx.font = "25pt Arial";
+		ctx.font = "bold 30px Arial";
 		ctx.textAlign = "center";
 		ctx.fillStyle = $scope.currentColor.color;
-		ctx.fillText(i18n.getString($scope.currentColor.name), centerx, centery, radius*2);
+		ctx.fillText(i18n.getString($scope.currentColor.name).toUpperCase(), centerx, centery+10, radius*2);
 		ctx.beginPath();
 		ctx.arc(centerx, centery, radius, arcStart, rads, false);
 		ctx.lineWidth = 15;

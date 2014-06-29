@@ -10,6 +10,26 @@ html, body {
 	height: 100%;
 }
 
+#game-screen {
+	background-color: rgb(220, 220, 220);
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#score-screen {
+	z-index: 1;
+	background-color: rgb(220, 220, 220);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
 #empty-container {
 	height: 15%;
 }
@@ -20,18 +40,48 @@ html, body {
 
 #buttons-container {
 	height: 25%;
+	position: relative;
 }
 
 #button-yes {
-	position: relative;
-	left: 25%;
+	color: green;
+	position: absolute;
+	right: 20%;
+	bottom: 30%;
 }
 
 #button-no {
-	position: relative;
-	left: 75%;
+	color: red;
+	position: absolute;
+	left: 20%;
+	bottom: 30%;
 }
 
 #color-wheel {
 	margin: 0 auto;
+}
+
+#score-container {
+	font-family: 'sans-serif';
+	font-size: 30px;
+	font-weight: bold;
+	color: #444;
+}
+
+.fadeout {
+	-moz-opacity: 0;
+	-webkit-opacity: 0;
+	opacity: 0;
+	-moz-transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+	transition: opacity 1s ease;
+}
+
+.fadein {
+	-moz-opacity: 1;
+	-webkit-opacity: 1;
+	opacity: 1;
+	-moz-transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+	transition: opacity 1s ease;
 }

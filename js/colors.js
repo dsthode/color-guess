@@ -4,7 +4,7 @@ angular.module('color-guess')
 .service('Colors', [function() {
 	return [
 		{
-			color: '#ddff00',
+			color: '#ffff00',
 			name: 'yellow',
 		},
 		{

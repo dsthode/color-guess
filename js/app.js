@@ -10,7 +10,7 @@ window.cancelAnimationFrame = window.cancelAnimationFrame ||
 angular.module('color-guess', ['ngRoute'])
 .constant('MAX_INITIAL_COLORS', 4)
 .constant('MAX_TIME', 5000)
-.constant('TIME_SUBSTRACT', 500)
+.constant('TIME_SUBSTRACT', 250)
 .config(['$routeProvider', function($routeProvider) {
 	$routeProvider
 	.when('/', {
