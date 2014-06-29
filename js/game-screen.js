@@ -11,6 +11,10 @@ angular.module('color-guess')
 		}
 		canvas.width = dimension;
 		canvas.height = dimension;
+		canvas.style.width = dimension + "px";
+		canvas.style.height = dimension + "px";
+		container.style.width = dimension + "px";
+		container.style.margin = "0 auto";
 	};
 	$scope.i18n = i18n;
 	$scope.currentColor = {};
