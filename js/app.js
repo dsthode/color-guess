@@ -17,9 +17,17 @@ angular.module('color-guess', ['ngRoute'])
 		templateUrl: 'partials/welcome-screen.html',
 		controller: 'WelcomeScreenCtrl'
 	})
-	.when('/game', {
-		templateUrl: 'partials/game-screen.html',
-		controller: 'GameScreenCtrl'
+	.when('/game-canvas', {
+		templateUrl: 'partials/game-screen-canvas.html',
+		controller: 'GameScreenCanvasCtrl'
+	})
+	.when('/game-svg', {
+		templateUrl: 'partials/game-screen-svg.html',
+		controller: 'GameScreenSVGCtrl'
+	})
+	.when('/game-end', {
+		templateUrl: 'partials/game-end-screen.html',
+		controller: 'GameEndScreenCtrl'
 	})
 	.when('/highscores', {
 		templateUrl: 'partials/highscores-screen.html',

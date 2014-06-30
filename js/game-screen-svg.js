@@ -1,37 +1,39 @@
 'use strict';
 
 angular.module('color-guess')
-.controller('GameScreenCtrl', ['$scope', 'i18n', 'GameService', function($scope, i18n, GameService) {
-	var setupCanvas = function(canvas) {
-		var container = document.getElementById('color-container');
+.controller('GameScreenSVGCtrl', ['$scope', 'i18n', 'GameService', function($scope, i18n, GameService) {
+	var setupCanvas = function() {
 		if (container.clientWidth > container.clientHeight) {
 			dimension = container.clientHeight;
 		} else {
 			dimension = container.clientWidth;
 		}
-		canvas.width = dimension;
-		canvas.height = dimension;
-		canvas.style.width = dimension + "px";
-		canvas.style.height = dimension + "px";
 		container.style.width = dimension + "px";
+		container.style.height = dimension + "px";
 		container.style.margin = "0 auto";
 	};
+	var container = document.getElementById('color-container');
 	$scope.i18n = i18n;
 	$scope.currentColor = {};
 	$scope.playing = false;
 	$scope.score = 0;
 	var dimension = 0;
 	var animationId = null;
-	var canvas = document.getElementById('color-wheel');
-	var ctx = canvas.getContext('2d');
-	setupCanvas(ctx.canvas);
+	setupCanvas();
 	var timeElapsed=0, 
 		rads=0, 
-		radius=(ctx.canvas.width/2)-20, 
-		centerx=(ctx.canvas.width/2), 
-		centery=(ctx.canvas.height/2), 
+		radius=(container.clientWidth/2)-20,
+		centerx=(container.clientWidth/2), 
+		centery=(container.clientHeight/2), 
+		startx=centerx,
+		starty=centery-radius,
+		animationStart = null,
 		arcStart=-(Math.PI/2),
-		animationStart = null;
+		destx=0,
+		desty=0,
+		degrees=0,
+		pathString = null;
+	var paper = Raphael(container, dimension, dimension);
 	$scope.buttonYes = function() {
 		if ($scope.playing) {
 			if ($scope.currentColor.answer == true) {
@@ -49,9 +51,6 @@ angular.module('color-guess')
 				gameEnded();
 			}
 		}
-	};
-	$scope.playAgain = function() {
-		startNewGame();
 	};
 	var startNewGame = function() {
 		$scope.playing = true;
@@ -73,16 +72,15 @@ angular.module('color-guess')
 			timeElapsed = $scope.currentColor.time;
 		}
 		rads = (timeElapsed * 2 * Math.PI / $scope.currentColor.time) + arcStart;
-		ctx.clearRect(0, 0, dimension, dimension);
-		ctx.font = "bold 30px Arial";
-		ctx.textAlign = "center";
-		ctx.fillStyle = $scope.currentColor.color;
-		ctx.fillText(i18n.getString($scope.currentColor.name).toUpperCase(), centerx, centery+10, radius*2);
-		ctx.beginPath();
-		ctx.arc(centerx, centery, radius, arcStart, rads, false);
-		ctx.lineWidth = 15;
-		ctx.strokeStyle = $scope.currentColor.color;
-		ctx.stroke();
+		degrees = rads * 180 / Math.PI;
+		destx = startx + radius*Math.sin(degrees);
+		desty = starty - radius*(1 - Math.cos(degrees));
+		pathString = Raphael.format("M{0},{1} A{2},{3} {4} {5},{6} {7},{8}",
+			startx, starty, radius, radius, 0, (degrees>180)? 1:0, (degrees <= 180)? 1:0, destx, desty)
+		paper.clear();
+		paper.path(pathString)
+			.attr('stroke', $scope.currentColor.color)
+			.attr('stroke-width', 20);
 		if ($scope.playing && timeElapsed < $scope.currentColor.time) {
 			animationId = window.requestAnimationFrame(animateColorWheel);
 		} else {
