@@ -21,7 +21,7 @@ angular.module('color-guess')
 		},
 		{
 			color: '#66ccff',
-			name: 'light_blue',
+			name: 'cyan',
 		},
 		{
 			color: '#61380b',

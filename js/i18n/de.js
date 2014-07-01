@@ -7,7 +7,7 @@ angular.module('color-guess')
 		blue: 'blau',
 		red: 'rot',
 		green: 'grün',
-		light_blue: 'hellblau',
+		cyan: 'hellblau',
 		brown: 'braun',
 		pink: 'rosa',
 		orange: 'orange',
