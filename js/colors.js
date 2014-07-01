@@ -19,11 +19,7 @@ angular.module('color-guess')
 			color: '#00cc00',
 			name: 'green',
 		},
-		{
-			color: '#66ccff',
-			name: 'cyan',
-		},
-		{
+d		{
 			color: '#61380b',
 			name: 'brown',
 		},
@@ -38,6 +34,10 @@ angular.module('color-guess')
 		{
 			color: '#6a0888',
 			name: 'purple',
+		},
+		{
+			color: '#66ccff',
+			name: 'cyan',
 		},
 		{
 			color: '#848484',
