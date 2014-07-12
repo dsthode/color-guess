@@ -23,6 +23,7 @@ angular.module('color-guess')
 		$scope.score = 0;
 		var dimension = 0;
 		var animationId = null;
+		var startAnimationId = null;
 		var canvas = document.getElementById('color-wheel');
 		var ctx = canvas.getContext('2d');
 		setupCanvas(ctx.canvas);
@@ -60,9 +61,15 @@ angular.module('color-guess')
 			$scope.currentColor = GameService.getNextColor();
 			$scope.score = $scope.currentColor.score;
 			animationStart = null;
-			window.requestAnimationFrame(animateColorWheel);
+			if (animationId) {
+				window.cancelAnimationFrame(animationId);
+			}
+			startAnimationId = window.requestAnimationFrame(animateColorWheel);
 		};
 		var animateColorWheel = function(timestamp) {
+			if (startAnimationId) {
+				window.cancelAnimationFrame(startAnimationId);
+			}
 			if (animationStart === null) {
 				animationStart = timestamp;
 			}

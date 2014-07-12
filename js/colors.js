@@ -19,7 +19,7 @@ angular.module('color-guess')
 			color: '#00cc00',
 			name: 'green',
 		},
-d		{
+		{
 			color: '#61380b',
 			name: 'brown',
 		},
