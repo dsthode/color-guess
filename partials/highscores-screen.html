@@ -1,6 +1,5 @@
 <div id="highscores-screen">
 	<div id="highscores-container">
-		<h1 class="centered"><span ng-bind="i18n.getString('highscores')"></span></h1>
 		<ul id="highscores-list">
 			<li ng-repeat="highscore in highscores track by $index"><span class="score{{$index}}" ng-bind="highscore"></span></li>
 		</ul>

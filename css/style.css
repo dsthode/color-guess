@@ -133,22 +133,27 @@ span {
 
 .score0 {
 	font-size: 52px;
+	color: #444
 }
 
 .score1 {
 	font-size: 48px;
+	color: #555;
 }
 
 .score2 {
 	font-size: 44px;
+	color: #666;
 }
 
 .score3 {
 	font-size: 40px;
+	color: #777;
 }
 
 .score4 {
 	font-size: 36px;
+	color: #888;
 }
 
 .button-left {
