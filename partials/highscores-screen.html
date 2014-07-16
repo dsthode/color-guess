@@ -1,5 +1,11 @@
-<a href="/"><span ng-bind="i18n.getString('back')"></span></a>
-<h1><span ng-bind="i18n.getString('highscores')"></span></h1>
-<ul>
-	<li ng-repeat="score in scores"><span ng-bind="score"></span></li>
-</ul>
+<div id="highscores-screen">
+	<div id="highscores-container">
+		<h1 class="centered"><span ng-bind="i18n.getString('highscores')"></span></h1>
+		<ul id="highscores-list">
+			<li ng-repeat="highscore in highscores track by $index"><span class="score{{$index}}" ng-bind="highscore"></span></li>
+		</ul>
+	</div>
+	<div id="buttons-container">
+		<a class="button-left" id="button-back" href="#/"><span class="fa-stack"><i class="fa fa-stack-2x fa-circle"></i><i class="fa fa-stack-1x fa-inverse fa-arrow-left"></i></span></a>
+	</div>
+</div>

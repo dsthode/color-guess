@@ -13,6 +13,9 @@ angular.module('color-guess')
 		orange: 'orange',
 		purple: 'lila',
 		gray: 'grau',
-		black: 'schwartz'
+		black: 'schwartz',
+		highscores: 'Highscores',
+		play: 'Play!',
+		back: 'Back'
 	};
 }]);

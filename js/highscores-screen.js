@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('color-guess')
-.controller('HighscoresScreenCtrl', ['$scope', 'i18n', function($scope, i18n) {
+.controller('HighscoresScreenCtrl', ['$scope', 'i18n', 'HighscoresService', function($scope, i18n, HighscoresService) {
 	$scope.i18n = i18n;
-	$scope.scores = [];
+	$scope.highscores = HighscoresService.getHighscores();
 }]);

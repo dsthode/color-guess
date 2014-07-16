@@ -6,8 +6,44 @@ html, body {
 	background-color: rgb(220,220,220);
 }
 
+a {
+	text-decoration: none;
+	color: #4444;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #444;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #444;
+}
+
+a:active {
+	text-decoration:  none;
+	color: #444;
+}
+
+span {
+	font-family: Arial, sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	color: #444;
+}
+
 #app-container {
 	height: 100%;
+}
+
+#welcome-screen {
+	background-color: rgb(220, 220, 220);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 
 #game-screen {
@@ -20,6 +56,15 @@ html, body {
 }
 
 #score-screen {
+	background-color: rgb(220, 220, 220);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#highscores-screen {
 	background-color: rgb(220, 220, 220);
 	position: absolute;
 	top: 0;
@@ -41,32 +86,38 @@ html, body {
 	position: relative;
 }
 
-#button-yes {
+#button-yes span {
 	color: green;
-	position: absolute;
-	right: 20%;
-	bottom: 30%;
 }
 
-#button-no {
+#button-no span {
 	color: red;
-	position: absolute;
-	left: 20%;
-	bottom: 30%;
 }
 
 #color-wheel {
 	margin: 0 auto;
 }
 
-#score-screen {
-	height: 100%;
-	width: 100%;
-}
-
 #score-container {
 	height: 75%;
 	width: 100%;
+}
+
+#highscores-container {
+	height: 75%;
+	width: 100%;
+}
+
+#new-game-container {
+	height: 75%;
+	width: 100%;
+}
+
+#highscores-list {
+	list-style-type: none;
+	list-style-image: none;
+	text-align: center;
+	padding: 0;
 }
 
 #score {
@@ -80,18 +131,52 @@ html, body {
 	color: #444;
 }
 
-#button-back {
-	color: #66ccff;
+.score0 {
+	font-size: 52px;
+}
+
+.score1 {
+	font-size: 48px;
+}
+
+.score2 {
+	font-size: 44px;
+}
+
+.score3 {
+	font-size: 40px;
+}
+
+.score4 {
+	font-size: 36px;
+}
+
+.button-left {
 	position: absolute;
 	left: 20%;
 	bottom: 30%;
 }
 
-#button-new-game {
-	color: #00cc00;
+.button-right {
 	position: absolute;
 	right: 20%;
 	bottom: 30%;
+}
+
+#button-back span {
+	color: #66ccff;
+}
+
+#button-new-game span {
+	color: #00cc00;
+}
+
+#button-highscores span {
+	color: #dd3333;
+}
+
+#button-about span {
+	color: #33dd33;
 }
 
 .fadeout {
@@ -110,4 +195,9 @@ html, body {
 	-moz-transition: opacity 1s ease;
 	-webkit-transition: opacity 1s ease;
 	transition: opacity 1s ease;
+}
+
+.centered {
+	margin: 0 auto;
+	text-align: center;
 }

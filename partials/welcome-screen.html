@@ -1,3 +1,9 @@
-<a href="#/game-canvas"><span ng-bind="i18n.getString('new_game')"></span></a>
-<a href="#/game-svg"><span ng-bind="i18n.getString('new_game')"></span> SVG</a>
-<a href="#/highscores"><span ng-bind="i18n.getString('highscores')"></span></a>
+<div id="welcome-screen">
+	<div id="new-game-container">
+		<a id="button-play" href="#/game-canvas"><span ng-bind="i18n.getString('play')"></span></a>
+	</div>
+	<div id="buttons-container">
+		<a class="button-left" id="button-about" href="#/about"><span class="fa-stack"><i class="fa fa-stack-2x fa-circle"></i><i class="fa fa-stack-1x fa-inverse fa-question"></i></span></a>
+		<a class="button-right" id="button-highscores" href="#/highscores"><span class="fa-stack"><i class="fa fa-stack-2x fa-circle"></i><i class="fa fa-stack-1x fa-inverse fa-trophy"></i></span></a>
+	</div>
+</div>

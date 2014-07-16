@@ -14,9 +14,8 @@ angular.module('color-guess')
 		purple: 'morado',
 		gray: 'gris',
 		black: 'negro',
-		new_game: 'Nueva partida',
 		highscores: 'Puntuaciones',
-		play: 'Jugar',
+		play: '¡Jugar!',
 		back: 'Volver'
 	};
 }]);

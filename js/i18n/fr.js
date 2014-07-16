@@ -13,7 +13,10 @@ angular.module('color-guess')
 		orange: 'orange',
 		purple: 'pourpre',
 		gray: 'gris',
-		black: 'noir'
+		black: 'noir',
+		highscores: 'Highscores',
+		play: 'Jouer!',
+		back: 'Back'
 	};
 }]);
 
