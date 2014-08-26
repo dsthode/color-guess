@@ -7,7 +7,7 @@ window.requestAnimationFrame = window.requestAnimationFrame ||
 window.cancelAnimationFrame = window.cancelAnimationFrame || 
 													window.mozCancelAnimationFrame;
 
-angular.module('color-guess', ['ngRoute'])
+angular.module('color-guess', ['ngRoute', 'ngSanitize'])
 .constant('MAX_INITIAL_COLORS', 4)
 .constant('MAX_TIME', 5000)
 .constant('TIME_SUBSTRACT', 250)
@@ -32,6 +32,10 @@ angular.module('color-guess', ['ngRoute'])
 	.when('/highscores', {
 		templateUrl: 'partials/highscores-screen.html',
 		controller: 'HighscoresScreenCtrl'
+	})
+	.when('/about', {
+		templateUrl: 'partials/about-screen.html',
+		controller: 'AboutScreenCtrl'
 	})
 	.otherwise('/');
 }])

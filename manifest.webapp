@@ -1,23 +1,21 @@
 {
 	"name": "Color Guess",
 	"description": "An app to test the Stroop effect guessing the right color",
-	"launch_path": "index.html",
+	"launch_path": "/index.html",
 	"icons": {
-		"256x256": "",
-		"128x128": "",
-		"120x120": "",
-		"90x90": "",
-		"64x64": "",
-		"60x60": "",
-		"48x48": "",
-		"32x32": ""
+		"512": "/res/img/circle-512.png",
+		"256": "/res/img/circle-256.png",
+		"128": "/res/img/circle-128.png",
+		"120": "/res/img/circle-120.png",
+		"90": "/res/img/circle-90.png",
+		"64": "/res/img/circle-64.png",
+		"60": "/res/img/circle-60.png",
+		"48": "/res/img/circle-48.png",
+		"32": "/res/img/circle-32.png"
 	},
 	"chrome": {"navigation": false},
 	"fullscreen": "true",
 	"orientation": "portrait-primary",
-	"installs_allowed_from": [
-		"https://marketplace.firefox.com"
-	],
 	"locales": {
 		"es": {
 			"description": "Una aplicación para probar el efecto Stroop acertando el color correcto"
@@ -36,5 +34,6 @@
 		"name": "Damian Serrano Thode",
 		"url": "http://dsthode.info"
 	},
-	"default_locale": "en"
+	"default_locale": "en",
+	"version": "0.1"
 }

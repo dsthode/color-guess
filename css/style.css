@@ -73,6 +73,15 @@ span {
 	bottom: 0;
 }
 
+#about-screen {
+	background-color: rgb(220, 220, 220);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
 #empty-container {
 	height: 15%;
 }
@@ -111,6 +120,22 @@ span {
 #new-game-container {
 	height: 75%;
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#about-container {
+	overflow: scroll;
+	height: 75%;
+	width: 100%;
+	position: relative;
+}
+
+#about-container div {
+	padding: 5%;
+	font-size: 18px;
+	font-weight: normal;
 }
 
 #highscores-list {
@@ -182,6 +207,9 @@ span {
 
 #button-about span {
 	color: #33dd33;
+}
+
+#button-play {
 }
 
 .fadeout {
