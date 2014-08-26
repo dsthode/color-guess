@@ -1,7 +1,7 @@
 {
 	"name": "Color Guess",
 	"description": "An app to test the Stroop effect guessing the right color",
-	"launch_path": "index.html",
+	"launch_path": "/index.html",
 	"icons": {
 		"512": "res/img/circle-512.png",
 		"256": "res/img/circle-256.png",
