@@ -1,0 +1,22 @@
+{
+  "name": "Color-Guess",
+  "version": "0.0.1",
+  "description": "Simple game for FirefoxOS that demonstrates the Stroop effect",
+  "author": "Damian Serrano Thode <mail@dsthode.info> (http://dsthode.info)",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/dsthode/color-guess.git"
+  },
+  "devDependencies": {
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-compress": "~0.6.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-imagemin": "~0.4.0",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-processhtml": "^0.3.3"
+  }
+}
