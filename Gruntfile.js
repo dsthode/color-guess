@@ -88,7 +88,7 @@ module.exports = function(grunt) {
 			jslibs: {
 				expand: true,
 				cwd: 'lib',
-				src: '*',
+				src: ['angular.min.js', 'angular-route.min.js', 'angular-sanitize.min.js'],
 				dest: 'build/color-guess/lib/'
 			},
 		},
